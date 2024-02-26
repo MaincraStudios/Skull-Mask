@@ -7,8 +7,8 @@ var score : int
 var game_started : bool = false
 
 #grid variables
-var cells : int = 24
-var cellsy : int = 11
+var cellsx : int = 20
+var cellsy : int = 10
 var cell_size : int = 50
 
 #food variables
@@ -111,7 +111,7 @@ func _on_move_timer_timeout():
 	check_goal()
 	
 func check_out_of_bounds():
-	if snake_data[0].x < 0 or snake_data[0].x > cells - 1 or snake_data[0].y < 0 or snake_data[0].y > cellsy - 1:
+	if snake_data[0].x < 1 or snake_data[0].x > cellsx - 1 or snake_data[0].y < 0 or snake_data[0].y > cellsy - 1:
 		end_game()
 		
 func check_self_eaten():
@@ -134,7 +134,7 @@ func check_goal():
 func move_food():
 	while regen_food:
 		regen_food = false
-		food_pos = Vector2(randi_range(0, cells - 1), randi_range(0, cellsy - 1))
+		food_pos = Vector2(randi_range(0, cellsx - 1), randi_range(0, cellsy - 1))
 		for i in snake_data:
 			if food_pos == i:
 				regen_food = true
