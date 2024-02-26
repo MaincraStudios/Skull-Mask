@@ -111,7 +111,7 @@ func _on_move_timer_timeout():
 	check_goal()
 	
 func check_out_of_bounds():
-	if snake_data[0].x < 1 or snake_data[0].x > cellsx - 1 or snake_data[0].y < 0 or snake_data[0].y > cellsy - 1:
+	if snake_data[0].x < 0 or snake_data[0].x > cellsx - 1 or snake_data[0].y < 0 or snake_data[0].y > cellsy - 1:
 		end_game()
 		
 func check_self_eaten():
