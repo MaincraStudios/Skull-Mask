@@ -1,2 +1,2 @@
-# snake_tutorial
- Snake game made in Godot
+# proyecto bimestral
+Juego hecho en Godot
