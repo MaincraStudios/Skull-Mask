@@ -1,0 +1,109 @@
+[gd_scene load_steps=9 format=3 uid="uid://bl2eoahrsnxxv"]
+
+[ext_resource type="Script" path="res://scripts/star_menu.gd" id="1_yoxm7"]
+[ext_resource type="FontFile" uid="uid://r5ttqaxnuvgk" path="res://assets/MaldiniBold.ttf" id="2_1wytg"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jp03k"]
+bg_color = Color(0, 0.239216, 0.305882, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0, 0, 1)
+shadow_size = 20
+
+[sub_resource type="LabelSettings" id="LabelSettings_abomt"]
+font_size = 86
+
+[sub_resource type="LabelSettings" id="LabelSettings_et3hd"]
+font_size = 42
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vafpg"]
+bg_color = Color(0, 0.611765, 0.172549, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5km3t"]
+bg_color = Color(0, 0.737255, 0.168627, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wqagw"]
+bg_color = Color(0, 0.572549, 0.631373, 1)
+
+[node name="StartMenu" type="CanvasLayer"]
+offset = Vector2(250, 100)
+scale = Vector2(0.6, 0.6)
+transform = Transform2D(0.6, 0, 0, 0.6, 250, 100)
+script = ExtResource("1_yoxm7")
+
+[node name="Panel" type="Panel" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -595.0
+offset_top = -290.0
+offset_right = 595.0
+offset_bottom = 290.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_jp03k")
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -442.0
+offset_top = -200.0
+offset_right = 442.0
+offset_bottom = -98.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_1wytg")
+theme_override_font_sizes/font_size = 200
+text = "JAFAR TE NECISITA"
+label_settings = SubResource("LabelSettings_abomt")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -490.5
+offset_top = -70.0
+offset_right = 490.5
+offset_bottom = 62.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_1wytg")
+theme_override_font_sizes/font_size = 50
+text = "AYUDA A JAFAR A ALIMENTAR A SU SERPIENTE
+USA LAS FLECHAS PARA MOVERTE 
+Y TEN CUIDADO CON LOS BORDES"
+label_settings = SubResource("LabelSettings_et3hd")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = 100.0
+offset_right = 150.0
+offset_bottom = 200.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_1wytg")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_vafpg")
+theme_override_styles/hover = SubResource("StyleBoxFlat_5km3t")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_wqagw")
+text = "CONTINUAR"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
