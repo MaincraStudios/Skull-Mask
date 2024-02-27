@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bv07ahls2cw58"
-path="res://.godot/imported/Wailord.png-1cd3b5fa95cbdb71c160fad8154ce638.ctex"
+uid="uid://btiuxapwm8fqt"
+path="res://.godot/imported/Card.png-fcf5af518641b62a47a126c9c51c1675.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/Wailord.png"
-dest_files=["res://.godot/imported/Wailord.png-1cd3b5fa95cbdb71c160fad8154ce638.ctex"]
+source_file="res://assets/memory_game/Card.png"
+dest_files=["res://.godot/imported/Card.png-fcf5af518641b62a47a126c9c51c1675.ctex"]
 
 [params]
 

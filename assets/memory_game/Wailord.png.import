@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://xbsp57uwdkmp"
-path="res://.godot/imported/Flareon.png-b7bbb8a243f515b65018c0b8982d4bc1.ctex"
+uid="uid://bv07ahls2cw58"
+path="res://.godot/imported/Wailord.png-f9db4e9d940549a7abade125a89a12f4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/Flareon.png"
-dest_files=["res://.godot/imported/Flareon.png-b7bbb8a243f515b65018c0b8982d4bc1.ctex"]
+source_file="res://assets/memory_game/Wailord.png"
+dest_files=["res://.godot/imported/Wailord.png-f9db4e9d940549a7abade125a89a12f4.ctex"]
 
 [params]
 

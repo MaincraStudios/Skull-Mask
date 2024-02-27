@@ -1,11 +1,11 @@
 [gd_scene load_steps=9 format=3 uid="uid://bwpnnjtvoi3t1"]
 
-[ext_resource type="Script" path="res://scripts/GameManager.gd" id="1_6vma8"]
+[ext_resource type="Script" path="res://scripts/memory_game/GameManager.gd" id="1_6vma8"]
 [ext_resource type="Texture2D" uid="uid://boggss5dd3hjp" path="res://assets/backgrounds/Library.png" id="2_h85lj"]
-[ext_resource type="Script" path="res://scripts/Card.gd" id="3_skxxi"]
-[ext_resource type="Texture2D" uid="uid://btiuxapwm8fqt" path="res://assets/sprites/Card.png" id="4_854u2"]
-[ext_resource type="Script" path="res://scripts/CardOneName.gd" id="5_edgvo"]
-[ext_resource type="Script" path="res://scripts/CardTwoName.gd" id="6_i1jem"]
+[ext_resource type="Script" path="res://scripts/memory_game/Card.gd" id="3_skxxi"]
+[ext_resource type="Texture2D" uid="uid://btiuxapwm8fqt" path="res://assets/memory_game/Card.png" id="4_854u2"]
+[ext_resource type="Script" path="res://scripts/memory_game/CardOneName.gd" id="5_edgvo"]
+[ext_resource type="Script" path="res://scripts/memory_game/CardTwoName.gd" id="6_i1jem"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_2n6ax"]
 

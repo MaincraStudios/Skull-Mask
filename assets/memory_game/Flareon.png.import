@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://carecach1vfy2"
-path="res://.godot/imported/Lickitung.png-75532d740cd432e3cff50981d069df50.ctex"
+uid="uid://xbsp57uwdkmp"
+path="res://.godot/imported/Flareon.png-99174d35ce9b49012e49b356de39f098.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/Lickitung.png"
-dest_files=["res://.godot/imported/Lickitung.png-75532d740cd432e3cff50981d069df50.ctex"]
+source_file="res://assets/memory_game/Flareon.png"
+dest_files=["res://.godot/imported/Flareon.png-99174d35ce9b49012e49b356de39f098.ctex"]
 
 [params]
 

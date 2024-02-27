@@ -43,18 +43,18 @@ func _ready():
 	card_one_string = "Card 1"
 	card_two_string = "Card 2"
 	last_try_was_pair = false
-	default_image = preload("res://assets/sprites/Card.png")
-	image1 = preload("res://assets/sprites/Lickilicky.png")
+	default_image = preload("res://assets/memory_game/Card.png")
+	image1 = preload("res://assets/memory_game/Lickilicky.png")
 	name_image1 = "Lickilicky"
-	image2 = preload("res://assets/sprites/Lickitung.png")
+	image2 = preload("res://assets/memory_game/Lickitung.png")
 	name_image2 = "Lickitung"
-	image3 = preload("res://assets/sprites/Snorlax.png")
+	image3 = preload("res://assets/memory_game/Snorlax.png")
 	name_image3 = "Snorlax"
-	image4 = preload("res://assets/sprites/Venusaur.png")
+	image4 = preload("res://assets/memory_game/Venusaur.png")
 	name_image4 = "Venusaur"
-	image5 = preload("res://assets/sprites/Wailord.png")
+	image5 = preload("res://assets/memory_game/Wailord.png")
 	name_image5 = "Wailord"
-	image6 = preload("res://assets/sprites/Flareon.png")
+	image6 = preload("res://assets/memory_game/Flareon.png")
 	name_image6 = "Flareon"
 	randomize()
 	init = false

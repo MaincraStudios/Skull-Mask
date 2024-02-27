@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bwujksuirv0pc"
-path="res://.godot/imported/Lickilicky.png-894aa079ef87d1f29765c6f94e283a01.ctex"
+uid="uid://cfswv22r1p30i"
+path="res://.godot/imported/Snorlax.png-c772da3331de8d5b67b8e06cd017793f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/Lickilicky.png"
-dest_files=["res://.godot/imported/Lickilicky.png-894aa079ef87d1f29765c6f94e283a01.ctex"]
+source_file="res://assets/memory_game/Snorlax.png"
+dest_files=["res://.godot/imported/Snorlax.png-c772da3331de8d5b67b8e06cd017793f.ctex"]
 
 [params]
 

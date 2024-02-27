@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cfswv22r1p30i"
-path="res://.godot/imported/Snorlax.png-9f816a1873794399a3d3172a98d1ac15.ctex"
+uid="uid://carecach1vfy2"
+path="res://.godot/imported/Lickitung.png-c4146ea2abe3bf5abe3df6def5f907c2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/Snorlax.png"
-dest_files=["res://.godot/imported/Snorlax.png-9f816a1873794399a3d3172a98d1ac15.ctex"]
+source_file="res://assets/memory_game/Lickitung.png"
+dest_files=["res://.godot/imported/Lickitung.png-c4146ea2abe3bf5abe3df6def5f907c2.ctex"]
 
 [params]
 

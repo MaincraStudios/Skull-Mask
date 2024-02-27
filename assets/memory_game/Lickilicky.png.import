@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://btiuxapwm8fqt"
-path="res://.godot/imported/Card.png-82e7f6010bd8d2394ab39ad1b3cc5a2c.ctex"
+uid="uid://bwujksuirv0pc"
+path="res://.godot/imported/Lickilicky.png-6066fc4c88aac9a541cf4f5d12698cdd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/Card.png"
-dest_files=["res://.godot/imported/Card.png-82e7f6010bd8d2394ab39ad1b3cc5a2c.ctex"]
+source_file="res://assets/memory_game/Lickilicky.png"
+dest_files=["res://.godot/imported/Lickilicky.png-6066fc4c88aac9a541cf4f5d12698cdd.ctex"]
 
 [params]
 

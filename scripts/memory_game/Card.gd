@@ -8,8 +8,8 @@ var click_enabled
 func _ready():
 	click_enabled = true
 	card_name = "Empty"
-	card_face = preload("res://assets/sprites/Card.png")
-	card_back = preload("res://assets/sprites/Card.png")
+	card_face = preload("res://assets/memory_game/Card.png")
+	card_back = preload("res://assets/memory_game/Card.png")
 	get_node("Sprite").texture = card_back
 	pass
 
