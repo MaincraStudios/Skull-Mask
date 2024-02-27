@@ -1,0 +1,206 @@
+[gd_scene load_steps=9 format=3 uid="uid://bwpnnjtvoi3t1"]
+
+[ext_resource type="Script" path="res://scripts/GameManager.gd" id="1_6vma8"]
+[ext_resource type="Texture2D" uid="uid://boggss5dd3hjp" path="res://assets/backgrounds/Library.png" id="2_h85lj"]
+[ext_resource type="Script" path="res://scripts/Card.gd" id="3_skxxi"]
+[ext_resource type="Texture2D" uid="uid://btiuxapwm8fqt" path="res://assets/sprites/Card.png" id="4_854u2"]
+[ext_resource type="Script" path="res://scripts/CardOneName.gd" id="5_edgvo"]
+[ext_resource type="Script" path="res://scripts/CardTwoName.gd" id="6_i1jem"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2n6ax"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rxk2c"]
+size = Vector2(122.5, 112.5)
+
+[node name="GameManager" type="Node2D"]
+position = Vector2(3, 6)
+scale = Vector2(0.2, 0.2)
+script = ExtResource("1_6vma8")
+
+[node name="Background" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_2n6ax")
+use_parent_material = true
+position = Vector2(627.5, 330)
+scale = Vector2(6.94595, 4.05056)
+texture = ExtResource("2_h85lj")
+region_rect = Rect2(100, 100, 0, 0)
+
+[node name="Card1" type="Area2D" parent="."]
+position = Vector2(35, 4)
+script = ExtResource("3_skxxi")
+
+[node name="Sprite" type="Sprite2D" parent="Card1"]
+position = Vector2(284.371, 237.317)
+scale = Vector2(0.810906, 0.795629)
+texture = ExtResource("4_854u2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Card1"]
+position = Vector2(283.75, 235.75)
+shape = SubResource("RectangleShape2D_rxk2c")
+
+[node name="Card2" type="Area2D" parent="."]
+position = Vector2(237, 2)
+script = ExtResource("3_skxxi")
+
+[node name="Sprite" type="Sprite2D" parent="Card2"]
+position = Vector2(284.371, 237.317)
+scale = Vector2(0.810906, 0.795629)
+texture = ExtResource("4_854u2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Card2"]
+position = Vector2(283.75, 235.75)
+shape = SubResource("RectangleShape2D_rxk2c")
+
+[node name="Card3" type="Area2D" parent="."]
+position = Vector2(441, 0)
+script = ExtResource("3_skxxi")
+
+[node name="Sprite" type="Sprite2D" parent="Card3"]
+position = Vector2(284.371, 237.317)
+scale = Vector2(0.810906, 0.795629)
+texture = ExtResource("4_854u2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Card3"]
+position = Vector2(283.75, 235.75)
+shape = SubResource("RectangleShape2D_rxk2c")
+
+[node name="Card4" type="Area2D" parent="."]
+position = Vector2(637, -2)
+script = ExtResource("3_skxxi")
+
+[node name="Sprite" type="Sprite2D" parent="Card4"]
+position = Vector2(284.371, 237.317)
+scale = Vector2(0.810906, 0.795629)
+texture = ExtResource("4_854u2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Card4"]
+position = Vector2(283.75, 235.75)
+shape = SubResource("RectangleShape2D_rxk2c")
+
+[node name="Card5" type="Area2D" parent="."]
+position = Vector2(35, 162)
+script = ExtResource("3_skxxi")
+
+[node name="Sprite" type="Sprite2D" parent="Card5"]
+position = Vector2(284.371, 237.317)
+scale = Vector2(0.810906, 0.795629)
+texture = ExtResource("4_854u2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Card5"]
+position = Vector2(283.75, 235.75)
+shape = SubResource("RectangleShape2D_rxk2c")
+
+[node name="Card6" type="Area2D" parent="."]
+position = Vector2(237, 160)
+script = ExtResource("3_skxxi")
+
+[node name="Sprite" type="Sprite2D" parent="Card6"]
+position = Vector2(284.371, 237.317)
+scale = Vector2(0.810906, 0.795629)
+texture = ExtResource("4_854u2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Card6"]
+position = Vector2(283.75, 235.75)
+shape = SubResource("RectangleShape2D_rxk2c")
+
+[node name="Card7" type="Area2D" parent="."]
+position = Vector2(441, 158)
+script = ExtResource("3_skxxi")
+
+[node name="Sprite" type="Sprite2D" parent="Card7"]
+position = Vector2(284.371, 237.317)
+scale = Vector2(0.810906, 0.795629)
+texture = ExtResource("4_854u2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Card7"]
+position = Vector2(283.75, 235.75)
+shape = SubResource("RectangleShape2D_rxk2c")
+
+[node name="Card8" type="Area2D" parent="."]
+position = Vector2(637, 156)
+script = ExtResource("3_skxxi")
+
+[node name="Sprite" type="Sprite2D" parent="Card8"]
+position = Vector2(284.371, 237.317)
+scale = Vector2(0.810906, 0.795629)
+texture = ExtResource("4_854u2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Card8"]
+position = Vector2(283.75, 235.75)
+shape = SubResource("RectangleShape2D_rxk2c")
+
+[node name="Card9" type="Area2D" parent="."]
+position = Vector2(35, 316)
+script = ExtResource("3_skxxi")
+
+[node name="Sprite" type="Sprite2D" parent="Card9"]
+position = Vector2(284.371, 237.317)
+scale = Vector2(0.810906, 0.795629)
+texture = ExtResource("4_854u2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Card9"]
+position = Vector2(283.75, 235.75)
+shape = SubResource("RectangleShape2D_rxk2c")
+
+[node name="Card10" type="Area2D" parent="."]
+position = Vector2(237, 314)
+script = ExtResource("3_skxxi")
+
+[node name="Sprite" type="Sprite2D" parent="Card10"]
+position = Vector2(284.371, 237.317)
+scale = Vector2(0.810906, 0.795629)
+texture = ExtResource("4_854u2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Card10"]
+position = Vector2(283.75, 235.75)
+shape = SubResource("RectangleShape2D_rxk2c")
+
+[node name="Card11" type="Area2D" parent="."]
+position = Vector2(441, 312)
+script = ExtResource("3_skxxi")
+
+[node name="Sprite" type="Sprite2D" parent="Card11"]
+position = Vector2(284.371, 237.317)
+scale = Vector2(0.810906, 0.795629)
+texture = ExtResource("4_854u2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Card11"]
+position = Vector2(283.75, 235.75)
+shape = SubResource("RectangleShape2D_rxk2c")
+
+[node name="Card12" type="Area2D" parent="."]
+position = Vector2(637, 310)
+script = ExtResource("3_skxxi")
+
+[node name="Sprite" type="Sprite2D" parent="Card12"]
+position = Vector2(284.371, 237.317)
+scale = Vector2(0.810906, 0.795629)
+texture = ExtResource("4_854u2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Card12"]
+position = Vector2(283.75, 235.75)
+shape = SubResource("RectangleShape2D_rxk2c")
+
+[node name="CardOneName" type="RichTextLabel" parent="."]
+offset_right = 1.0
+text = "Card 1 : Name"
+script = ExtResource("5_edgvo")
+metadata/_edit_use_anchors_ = true
+
+[node name="CardTwoName" type="RichTextLabel" parent="."]
+offset_right = 1.0
+text = "Card 1 : Name"
+script = ExtResource("6_i1jem")
+metadata/_edit_use_anchors_ = true
+
+[node name="CheckBox" type="RichTextLabel" parent="."]
+offset_right = 1.0
+text = "?"
+script = ExtResource("6_i1jem")
+metadata/_edit_use_anchors_ = true
+
+[node name="NumberOfMatches" type="RichTextLabel" parent="."]
+offset_right = 1.0
+text = "Number of Matches: 0"
+script = ExtResource("6_i1jem")
+metadata/_edit_use_anchors_ = true
