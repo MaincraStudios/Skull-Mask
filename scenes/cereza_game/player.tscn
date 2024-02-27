@@ -1,0 +1,159 @@
+[gd_scene load_steps=20 format=3 uid="uid://red01kor30mj"]
+
+[ext_resource type="Shader" path="res://shaders/cereza_game/chroma.gdshader" id="1_orv0j"]
+[ext_resource type="Script" path="res://scripts/cereza_game/player.gd" id="1_uv6x2"]
+[ext_resource type="Texture2D" uid="uid://bkefx3y4n6y35" path="res://assets/cereza_game/characters/DS DSi - Pokemon HeartGold SoulSilver - Trainers Overworld.png" id="2_5w3eb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8ir26"]
+size = Vector2(17.5, 24)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ryhwi"]
+shader = ExtResource("1_orv0j")
+shader_parameter/chroma_key = Color(0.596078, 0.690196, 0.564706, 1)
+shader_parameter/intensity = 0.1
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6kt56"]
+atlas = ExtResource("2_5w3eb")
+region = Rect2(575, 384, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0bfto"]
+atlas = ExtResource("2_5w3eb")
+region = Rect2(575, 384, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5a380"]
+atlas = ExtResource("2_5w3eb")
+region = Rect2(639, 384, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y0wpg"]
+atlas = ExtResource("2_5w3eb")
+region = Rect2(607, 480, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_isx7b"]
+atlas = ExtResource("2_5w3eb")
+region = Rect2(639, 416, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u1wji"]
+atlas = ExtResource("2_5w3eb")
+region = Rect2(639, 480, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_atolm"]
+atlas = ExtResource("2_5w3eb")
+region = Rect2(639, 448, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tlgo6"]
+atlas = ExtResource("2_5w3eb")
+region = Rect2(575, 448, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6tp34"]
+atlas = ExtResource("2_5w3eb")
+region = Rect2(575, 416, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eje41"]
+atlas = ExtResource("2_5w3eb")
+region = Rect2(575, 480, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ldyyg"]
+atlas = ExtResource("2_5w3eb")
+region = Rect2(607, 384, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6jvj5"]
+atlas = ExtResource("2_5w3eb")
+region = Rect2(607, 448, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u2htb"]
+atlas = ExtResource("2_5w3eb")
+region = Rect2(607, 416, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_q2r0p"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6kt56")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0bfto")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5a380")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y0wpg")
+}],
+"loop": true,
+"name": &"move_back",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_isx7b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u1wji")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_atolm")
+}],
+"loop": true,
+"name": &"move_front",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tlgo6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6tp34")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eje41")
+}],
+"loop": true,
+"name": &"move_left",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ldyyg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6jvj5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u2htb")
+}],
+"loop": true,
+"name": &"move_right",
+"speed": 7.0
+}]
+
+[node name="Player" type="CharacterBody2D"]
+position = Vector2(128, 126)
+script = ExtResource("1_uv6x2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.25, 0)
+shape = SubResource("RectangleShape2D_8ir26")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+material = SubResource("ShaderMaterial_ryhwi")
+position = Vector2(1, -2)
+sprite_frames = SubResource("SpriteFrames_q2r0p")
+animation = &"move_back"
+autoplay = "idle"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(-4, -53)
+limit_left = 0
+limit_right = 256
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 7.5
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

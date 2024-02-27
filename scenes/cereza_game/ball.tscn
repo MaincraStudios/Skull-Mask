@@ -1,0 +1,68 @@
+[gd_scene load_steps=8 format=3 uid="uid://b7frd1ix8u5mi"]
+
+[ext_resource type="Shader" path="res://shaders/cereza_game/chroma.gdshader" id="1_v3cv7"]
+[ext_resource type="Texture2D" uid="uid://c3p8hqjpfs2wj" path="res://assets/cereza_game/characters/DS DSi - Pokemon Black White - Overworld Entites (1).png" id="3_dwq3p"]
+
+[sub_resource type="GDScript" id="GDScript_cs5hm"]
+script/source = "extends Area2D
+
+
+const SPEED = 300.0
+const JUMP_VELOCITY = -400.0
+@export var ball_speed = 150
+var bottom_limit = 139
+
+# Get the gravity from the project settings to be synced with RigidBody nodes.
+#var gravity = ProjectSettings.get_setting(\"physics/2d/default_gravity\")
+var velocity = Vector2(0,0)
+
+func _physics_process(delta):
+	global_position.y += ball_speed*delta 
+	if global_position.y > bottom_limit:
+		die()
+
+func _on_body_entered(body):
+	body.reset_position()
+	die()
+	
+func die():
+	queue_free()
+"
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_l5v0g"]
+radius = 6.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_fex1q"]
+shader = ExtResource("1_v3cv7")
+shader_parameter/chroma_key = Color(0.533333, 0.564706, 0.815686, 1)
+shader_parameter/intensity = 0.1
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_46wn2"]
+atlas = ExtResource("3_dwq3p")
+region = Rect2(288, 1696, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_86jn3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_46wn2")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[node name="Ball" type="Area2D"]
+position = Vector2(66, 52)
+script = SubResource("GDScript_cs5hm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_l5v0g")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+material = SubResource("ShaderMaterial_fex1q")
+position = Vector2(1, -10)
+sprite_frames = SubResource("SpriteFrames_86jn3")
+animation = &"idle"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

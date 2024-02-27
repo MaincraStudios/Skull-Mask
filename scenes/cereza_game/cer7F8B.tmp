@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://qr8pn5ypccey"]
+
+[ext_resource type="Texture2D" uid="uid://b3nnr17txku2n" path="res://assets/cereza_game/backgrounds/cynthia_background.png" id="1_f4vg4"]
+[ext_resource type="PackedScene" uid="uid://red01kor30mj" path="res://scenes/cereza_game/player.tscn" id="2_r7j0n"]
+[ext_resource type="PackedScene" uid="uid://dlp78xavute7s" path="res://scenes/cereza_game/enemy_cereza.tscn" id="3_2wvyk"]
+[ext_resource type="PackedScene" uid="uid://dcjxpww28xq5o" path="res://scenes/cereza_game/enemy_animation.tscn" id="4_kh53y"]
+
+[node name="cereza_level" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = 268.0
+offset_top = -498.0
+offset_right = 971.0
+offset_bottom = -217.0
+rotation = 1.5708
+texture = ExtResource("1_f4vg4")
+expand_mode = 1
+
+[node name="Player" parent="." instance=ExtResource("2_r7j0n")]
+
+[node name="Enemy_Cereza" parent="." instance=ExtResource("3_2wvyk")]
+
+[node name="Enemy animation" parent="." instance=ExtResource("4_kh53y")]
