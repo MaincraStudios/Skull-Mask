@@ -1,0 +1,156 @@
+[gd_scene load_steps=20 format=3 uid="uid://dlp78xavute7s"]
+
+[ext_resource type="Shader" path="res://shaders/cereza_game/chroma.gdshader" id="1_0h6a3"]
+[ext_resource type="Script" path="res://scripts/cereza_game/enemy_cereza.gd" id="1_i8dwe"]
+[ext_resource type="Texture2D" uid="uid://c3p8hqjpfs2wj" path="res://assets/cereza_game/characters/DS DSi - Pokemon Black White - Overworld Entites (1).png" id="2_lidg3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_761k7"]
+size = Vector2(22, 29)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_a57rb"]
+shader = ExtResource("1_0h6a3")
+shader_parameter/chroma_key = Color(0.219608, 0.501961, 0.219608, 1)
+shader_parameter/intensity = 0.1
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8aqgq"]
+atlas = ExtResource("2_lidg3")
+region = Rect2(0, 2560, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ieh0o"]
+atlas = ExtResource("2_lidg3")
+region = Rect2(0, 2528, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xyxxf"]
+atlas = ExtResource("2_lidg3")
+region = Rect2(32, 2528, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fg8ym"]
+atlas = ExtResource("2_lidg3")
+region = Rect2(64, 2528, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6dq77"]
+atlas = ExtResource("2_lidg3")
+region = Rect2(0, 2560, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lqliv"]
+atlas = ExtResource("2_lidg3")
+region = Rect2(32, 2560, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s3bwl"]
+atlas = ExtResource("2_lidg3")
+region = Rect2(64, 2560, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mxkps"]
+atlas = ExtResource("2_lidg3")
+region = Rect2(0, 2592, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_go7d6"]
+atlas = ExtResource("2_lidg3")
+region = Rect2(32, 2592, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k8u8f"]
+atlas = ExtResource("2_lidg3")
+region = Rect2(64, 2592, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4b33c"]
+atlas = ExtResource("2_lidg3")
+region = Rect2(0, 2624, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q6ypu"]
+atlas = ExtResource("2_lidg3")
+region = Rect2(32, 2624, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ag2yw"]
+atlas = ExtResource("2_lidg3")
+region = Rect2(64, 2624, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1e8wd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8aqgq")
+}],
+"loop": false,
+"name": &"idle",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ieh0o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xyxxf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fg8ym")
+}],
+"loop": true,
+"name": &"move_back",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6dq77")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lqliv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s3bwl")
+}],
+"loop": false,
+"name": &"move_front",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mxkps")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_go7d6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k8u8f")
+}],
+"loop": true,
+"name": &"move_left",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4b33c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q6ypu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ag2yw")
+}],
+"loop": true,
+"name": &"move_right",
+"speed": 7.0
+}]
+
+[node name="Enemy_Cereza" type="CharacterBody2D"]
+position = Vector2(128, -415)
+script = ExtResource("1_i8dwe")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_761k7")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+material = SubResource("ShaderMaterial_a57rb")
+sprite_frames = SubResource("SpriteFrames_1e8wd")
+animation = &"idle"
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[node name="SceneStart" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="SceneStart" to="." method="_on_scene_start_timeout"]
