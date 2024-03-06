@@ -1,0 +1,45 @@
+[gd_scene load_steps=9 format=3 uid="uid://dhxb48p6h4yg0"]
+
+[ext_resource type="Script" path="res://scripts/snake_game/main_snake.gd" id="1_f20vt"]
+[ext_resource type="PackedScene" uid="uid://beaa828xfn3nx" path="res://scenes/snake_game/snake_segment.tscn" id="2_io2sj"]
+[ext_resource type="Texture2D" uid="uid://nv6mr67t4g6w" path="res://assets/snake_game/bg_snake.png" id="3_gwbvw"]
+[ext_resource type="PackedScene" uid="uid://tmcq5gpw66gu" path="res://scenes/snake_game/hud.tscn" id="3_s77pf"]
+[ext_resource type="Texture2D" uid="uid://dm161rpidpjvb" path="res://assets/snake_game/food.png" id="5_0j00u"]
+[ext_resource type="PackedScene" uid="uid://cad25ojl47q8" path="res://scenes/snake_game/game_over_menu.tscn" id="6_xkat8"]
+[ext_resource type="PackedScene" uid="uid://brdigc7ghlmqo" path="res://scenes/snake_game/goal_menu.tscn" id="7_eltt3"]
+[ext_resource type="PackedScene" uid="uid://bl2eoahrsnxxv" path="res://scenes/snake_game/star_menu.tscn" id="8_febnq"]
+
+[node name="Main" type="Node"]
+script = ExtResource("1_f20vt")
+snake_scene = ExtResource("2_io2sj")
+
+[node name="Background" type="Sprite2D" parent="."]
+texture_filter = 3
+position = Vector2(128, 76)
+scale = Vector2(1.72973, 1.088)
+texture = ExtResource("3_gwbvw")
+
+[node name="Hud" parent="." instance=ExtResource("3_s77pf")]
+
+[node name="MoveTimer" type="Timer" parent="."]
+wait_time = 0.1
+
+[node name="Food" type="Sprite2D" parent="."]
+position = Vector2(0.666667, 0.774193)
+scale = Vector2(0.133333, 0.129032)
+texture = ExtResource("5_0j00u")
+offset = Vector2(25, 25)
+flip_h = true
+
+[node name="GameOverMenu" parent="." instance=ExtResource("6_xkat8")]
+process_mode = 2
+
+[node name="GoalMenu" parent="." instance=ExtResource("7_eltt3")]
+process_mode = 2
+
+[node name="StartMenu" parent="." instance=ExtResource("8_febnq")]
+
+[connection signal="timeout" from="MoveTimer" to="." method="_on_move_timer_timeout"]
+[connection signal="restart" from="GameOverMenu" to="." method="_on_game_over_menu_restart"]
+[connection signal="goal" from="GoalMenu" to="." method="_on_goal_menu_goal"]
+[connection signal="start" from="StartMenu" to="." method="_on_start_menu_start"]

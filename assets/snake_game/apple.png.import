@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://boggss5dd3hjp"
-path="res://.godot/imported/Library.png-d6a30c5072d4a533b277b3bbd7de3e29.ctex"
+uid="uid://dxyvfago0gd5f"
+path="res://.godot/imported/apple.png-f9d2384d995752424315031956d0b00b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/backgrounds/Library.png"
-dest_files=["res://.godot/imported/Library.png-d6a30c5072d4a533b277b3bbd7de3e29.ctex"]
+source_file="res://assets/snake_game/apple.png"
+dest_files=["res://.godot/imported/apple.png-f9d2384d995752424315031956d0b00b.ctex"]
 
 [params]
 

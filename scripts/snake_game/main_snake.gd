@@ -7,9 +7,9 @@ var score : int
 var game_started : bool = false
 
 #grid variables
-var cellsx : int = 20
-var cellsy : int = 10
-var cell_size : int = 50
+var cellsx : int = 32
+var cellsy : int = 17
+var cell_size : int = 8
 
 #food variables
 var food_pos : Vector2
@@ -128,7 +128,7 @@ func check_food_eaten():
 		move_food()
 		
 func check_goal():
-	if score > 2:
+	if score > 4:
 		end_goal()
 	
 func move_food():

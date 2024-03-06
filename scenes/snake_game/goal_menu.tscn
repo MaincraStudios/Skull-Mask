@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://brdigc7ghlmqo"]
 
-[ext_resource type="FontFile" uid="uid://r5ttqaxnuvgk" path="res://assets/MaldiniBold.ttf" id="1_1cf3q"]
-[ext_resource type="Script" path="res://scripts/goal_menu.gd" id="1_mcob8"]
+[ext_resource type="FontFile" uid="uid://r5ttqaxnuvgk" path="res://assets/snake_game/MaldiniBold.ttf" id="1_1cf3q"]
+[ext_resource type="Script" path="res://scripts/snake_game/goal_menu.gd" id="1_mcob8"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jp03k"]
 bg_color = Color(0, 0.239216, 0.305882, 1)
@@ -29,8 +29,8 @@ bg_color = Color(0, 0.572549, 0.631373, 1)
 
 [node name="GoalMenu" type="CanvasLayer"]
 offset = Vector2(250, 100)
-scale = Vector2(0.6, 0.6)
-transform = Transform2D(0.6, 0, 0, 0.6, 250, 100)
+scale = Vector2(0.2, 0.2)
+transform = Transform2D(0.2, 0, 0, 0.2, 250, 100)
 script = ExtResource("1_mcob8")
 
 [node name="Panel" type="Panel" parent="."]
@@ -39,10 +39,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -595.0
-offset_top = -290.0
-offset_right = 595.0
-offset_bottom = 290.0
+offset_left = -1333.0
+offset_top = -507.0
+offset_right = -143.0
+offset_bottom = 73.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_jp03k")
@@ -53,10 +53,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -442.0
-offset_top = -200.0
-offset_right = 442.0
-offset_bottom = -98.0
+offset_left = -1180.0
+offset_top = -417.0
+offset_right = -296.0
+offset_bottom = -315.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("1_1cf3q")
@@ -72,10 +72,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -490.5
-offset_top = -70.0
-offset_right = 490.5
-offset_bottom = 62.0
+offset_left = -1228.5
+offset_top = -287.0
+offset_right = -247.5
+offset_bottom = -155.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("1_1cf3q")
@@ -92,10 +92,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -150.0
-offset_top = 100.0
-offset_right = 150.0
-offset_bottom = 200.0
+offset_left = -888.0
+offset_top = -117.0
+offset_right = -588.0
+offset_bottom = -16.9999
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("1_1cf3q")
