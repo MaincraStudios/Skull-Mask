@@ -1,0 +1,29 @@
+[gd_scene load_steps=6 format=3 uid="uid://bk6mupo4dafju"]
+
+[ext_resource type="Shader" path="res://shaders/cereza_game/chroma.gdshader" id="1_fqb5i"]
+[ext_resource type="Texture2D" uid="uid://bkefx3y4n6y35" path="res://assets/cereza_game/characters/DS DSi - Pokemon HeartGold SoulSilver - Trainers Overworld.png" id="2_i6pm4"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_bhcy7"]
+shader = ExtResource("1_fqb5i")
+shader_parameter/chroma_key = Color(0.439216, 0.721569, 0.407843, 1)
+shader_parameter/intensity = 0.1
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3k2f7"]
+atlas = ExtResource("2_i6pm4")
+region = Rect2(543, 416, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_oa4qn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3k2f7")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[node name="Erin_NPC" type="AnimatedSprite2D"]
+material = SubResource("ShaderMaterial_bhcy7")
+sprite_frames = SubResource("SpriteFrames_oa4qn")
+animation = &"idle"
