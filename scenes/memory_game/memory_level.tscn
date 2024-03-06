@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://bwpnnjtvoi3t1"]
 
-[ext_resource type="Script" path="res://scripts/memory_game/GameManager.gd" id="1_md138"]
+[ext_resource type="Script" path="res://scripts/memory_game/MemoryLevel.gd" id="1_md138"]
 [ext_resource type="Texture2D" uid="uid://boggss5dd3hjp" path="res://assets/memory_game/Library.png" id="2_3v4xx"]
 [ext_resource type="Script" path="res://scripts/memory_game/Card.gd" id="3_wojpv"]
 [ext_resource type="Texture2D" uid="uid://btiuxapwm8fqt" path="res://assets/memory_game/Card.png" id="4_2d1yr"]

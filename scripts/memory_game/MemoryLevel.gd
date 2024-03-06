@@ -58,6 +58,7 @@ func _ready():
 	name_image6 = "Flareon"
 	randomize()
 	init = false
+	
 
 func _process(delta):
 	if !init:
