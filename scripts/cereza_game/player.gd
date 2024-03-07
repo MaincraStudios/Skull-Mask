@@ -32,7 +32,7 @@ func _physics_process(delta):
 			direction = "left"
 		
 	#if global_position.y == -380:
-	if global_position.y <= 110:
+	if global_position.y <= -380:
 		get_tree().change_scene_to_file("res://scenes/cereza_game/cereza_end_message.tscn")
 		
 	move_and_slide()
