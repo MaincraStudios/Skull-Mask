@@ -1,0 +1,126 @@
+[gd_scene load_steps=11 format=3 uid="uid://c1w4nxlv7dhlp"]
+
+[ext_resource type="Script" path="res://scripts/memory_game/MemoryEndMessage.gd" id="1_7x00i"]
+[ext_resource type="FontFile" uid="uid://r5ttqaxnuvgk" path="res://assets/snake_game/MaldiniBold.ttf" id="2_gva64"]
+[ext_resource type="Texture2D" uid="uid://boggss5dd3hjp" path="res://assets/memory_game/Library.png" id="3_rm6e8"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jp03k"]
+bg_color = Color(0, 0.32549, 0.611765, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0, 0, 1)
+shadow_size = 20
+
+[sub_resource type="LabelSettings" id="LabelSettings_abomt"]
+font_size = 86
+font_color = Color(0.180392, 0.764706, 0.392157, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_et3hd"]
+font_size = 42
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vafpg"]
+bg_color = Color(0, 0.611765, 0.172549, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5km3t"]
+bg_color = Color(0, 0.737255, 0.168627, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wqagw"]
+bg_color = Color(0, 0.572549, 0.631373, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_u8wf5"]
+
+[node name="StartMenu" type="CanvasLayer"]
+offset = Vector2(250, 100)
+scale = Vector2(0.2, 0.2)
+transform = Transform2D(0.2, 0, 0, 0.2, 250, 100)
+script = ExtResource("1_7x00i")
+
+[node name="Panel" type="Panel" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -1333.0
+offset_top = -482.0
+offset_right = -143.0
+offset_bottom = 98.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 8
+theme_override_styles/panel = SubResource("StyleBoxFlat_jp03k")
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -1180.0
+offset_top = -392.0
+offset_right = -296.0
+offset_bottom = -290.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 8
+theme_override_fonts/font = ExtResource("2_gva64")
+theme_override_font_sizes/font_size = 200
+text = "Erin"
+label_settings = SubResource("LabelSettings_abomt")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -1228.5
+offset_top = -262.0
+offset_right = -247.5
+offset_bottom = -130.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 8
+theme_override_fonts/font = ExtResource("2_gva64")
+theme_override_font_sizes/font_size = 50
+text = "Has logrado vencer este reto, se nota que eres muy ágil, 
+me caes muy bien. Ahora que somos amigos te contaré mi historia
+##################"
+label_settings = SubResource("LabelSettings_et3hd")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -888.0
+offset_top = -71.9999
+offset_right = -588.0
+offset_bottom = 28.0001
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 8
+theme_override_fonts/font = ExtResource("2_gva64")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_vafpg")
+theme_override_styles/hover = SubResource("StyleBoxFlat_5km3t")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_wqagw")
+text = "CONTINUAR"
+
+[node name="Background" type="Sprite2D" parent="."]
+z_index = -1
+material = SubResource("ShaderMaterial_u8wf5")
+use_parent_material = true
+position = Vector2(-607.06, -140)
+scale = Vector2(6.94595, 4.05056)
+texture = ExtResource("3_rm6e8")
+region_rect = Rect2(100, 100, 0, 0)
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

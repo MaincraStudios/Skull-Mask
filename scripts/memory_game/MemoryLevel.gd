@@ -38,6 +38,7 @@ var all_remaining_cards = []
 var random_card
 var card_number
 
+
 func _ready():
 	number_of_matches = 0
 	card_one_string = "Card 1"
@@ -58,7 +59,6 @@ func _ready():
 	name_image6 = "Flareon"
 	randomize()
 	init = false
-	
 
 func _process(delta):
 	if !init:
@@ -187,6 +187,9 @@ func _check_if_pair():
 			_reset_card_name_strings_and_check_box()
 			_turn_around_cards()
 			_enable_all_cards_clicks()
+	
+	if number_of_matches == 6:
+		get_tree().change_scene_to_file("res://scenes/memory_game/memory_end_message.tscn")
 
 func _reset_card_name_strings_and_check_box():
 	get_node("CardOneName").text = card_one_string
@@ -238,6 +241,3 @@ func _enable_all_cards_clicks():
 		get_node("Card11").click_enabled = true
 	if get_node("Card12").get_node("Sprite").texture == default_image:
 		get_node("Card12").click_enabled = true
-
-
-
