@@ -87,9 +87,10 @@ grow_vertical = 2
 size_flags_vertical = 8
 theme_override_fonts/font = ExtResource("2_gfg1y")
 theme_override_font_sizes/font_size = 50
-text = "¿Has escuchado lo que dicen sobre mi?, ¿no me tienes miedo?
-¿Que haces aquí?
-Te reto a un duelo que sobrepasará tus capacidades"
+text = "¿Has escuchado lo que dicen sobre mi?, ¿Por qué estás aquí? 
+Seguramente quieres conocerme, ¿verdad? 
+Te desafío a un duelo que pondrá a prueba tus habilidades. 
+Si ganas, te concedo el honor de conocerme."
 label_settings = SubResource("LabelSettings_et3hd")
 horizontal_alignment = 1
 vertical_alignment = 1

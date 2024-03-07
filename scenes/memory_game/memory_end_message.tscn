@@ -59,9 +59,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -1180.0
-offset_top = -392.0
+offset_top = -452.0
 offset_right = -296.0
-offset_bottom = -290.0
+offset_bottom = -350.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_vertical = 8
@@ -87,9 +87,13 @@ grow_vertical = 2
 size_flags_vertical = 8
 theme_override_fonts/font = ExtResource("2_gva64")
 theme_override_font_sizes/font_size = 50
-text = "Has logrado vencer este reto, se nota que eres muy ágil, 
-me caes muy bien. Ahora que somos amigos te contaré mi historia
-##################"
+text = "Has logrado vencer este reto, se nota que eres muy ágil,
+me agradas. Ahora que somos amigos te contaré mi historia:
+Cuando era nueva, mucha gente solía molestarme
+ porque prefería estudiar en lugar de jugar en el patio con los demás. 
+Me uní al grupo porque ellos no me juzgaban,  pero
+ nunca imaginé que la gente nos percibiera como personas intimidantes.
+"
 label_settings = SubResource("LabelSettings_et3hd")
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -101,9 +105,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -888.0
-offset_top = -71.9999
+offset_top = -31.9999
 offset_right = -588.0
-offset_bottom = 28.0001
+offset_bottom = 68.0001
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_vertical = 8
