@@ -5,7 +5,6 @@
 - Andrés Fernando Ponce Córdova
 - Chiristian Falso Nazareno Tilapia
 - Dennis David Lincango Simbaña
-- Jordy Fabián Matamoros Maldonado
 - Mickel Pavel Vásquez Ruiz
 
 ## Herramientas utilizadas:
