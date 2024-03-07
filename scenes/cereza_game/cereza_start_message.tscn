@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dydmc4mxcgaxe"]
+[gd_scene load_steps=11 format=3 uid="uid://cjoy76ro5e2il"]
 
 [ext_resource type="Script" path="res://scripts/cereza_game/cereza_start_message.gd" id="1_egh88"]
 [ext_resource type="FontFile" uid="uid://r5ttqaxnuvgk" path="res://assets/snake_game/MaldiniBold.ttf" id="2_lcfck"]
