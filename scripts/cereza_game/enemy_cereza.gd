@@ -14,7 +14,7 @@ var right_limit = 246
 var enemy_speed = 200
 
 #Tiempo para lanzar la bola en segundos
-var time = 0.21
+var time = 0.27
 var ready_to_shoot = false
 
 func _ready():
