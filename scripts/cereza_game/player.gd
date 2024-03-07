@@ -31,7 +31,9 @@ func _physics_process(delta):
 			velocity = Vector2(-player_speed,0)
 			direction = "left"
 		
-	
+	#if global_position.y == -380:
+	if global_position.y <= 110:
+		get_tree().change_scene_to_file("res://scenes/cereza_game/cereza_end_message.tscn")
 		
 	move_and_slide()
 	#var size =  get_viewport_rect().size
