@@ -10,6 +10,5 @@ func _ready():
 func _process(delta):
 	pass
 
-
 func _on_button_pressed():
-	get_tree().change_scene_to_file("res://scenes/cereza_game/cereza_start_message.tscn")
+	get_tree().change_scene_to_file("res://scenes/snake_game/main.tscn")

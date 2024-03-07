@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://cad25ojl47q8"]
+[gd_scene load_steps=8 format=3 uid="uid://cad25ojl47q8"]
 
 [ext_resource type="FontFile" uid="uid://r5ttqaxnuvgk" path="res://assets/snake_game/MaldiniBold.ttf" id="1_4cjqx"]
 [ext_resource type="Script" path="res://scripts/snake_game/game_over_menu.gd" id="1_gisk4"]
@@ -7,6 +7,10 @@
 bg_color = Color(0, 0.239216, 0.305882, 1)
 shadow_size = 5
 shadow_offset = Vector2(10, 10)
+
+[sub_resource type="LabelSettings" id="LabelSettings_7si58"]
+line_spacing = 12.0
+font_size = 22
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8be6j"]
 bg_color = Color(0, 0.611765, 0.172549, 1)
@@ -28,10 +32,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -20.5
-offset_top = -34.5
-offset_right = 379.5
-offset_bottom = 215.5
+offset_left = -75.0
+offset_top = -34.0
+offset_right = 469.0
+offset_bottom = 216.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
@@ -43,16 +47,18 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 46.0
-offset_top = 4.49999
-offset_right = 313.0
-offset_bottom = 74.5
+offset_left = -3.00001
+offset_top = 18.0
+offset_right = 409.0
+offset_bottom = 85.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 theme_override_fonts/font = ExtResource("1_4cjqx")
 theme_override_font_sizes/font_size = 50
-text = "GAME OVER!"
+text = "PARECE QUE NO ERES TAN BUENO CON LOS ANIMALES.
+AL PARECER ESPERBA MUCHO DE TUS HABILIDADES"
+label_settings = SubResource("LabelSettings_7si58")
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -62,10 +68,10 @@ anchor_left = 0.5
 anchor_top = 0.504
 anchor_right = 0.5
 anchor_bottom = 0.504
-offset_left = 56.5
-offset_top = 81.9
-offset_right = 306.5
-offset_bottom = 144.9
+offset_left = 54.5
+offset_top = 102.424
+offset_right = 371.5
+offset_bottom = 165.424
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
@@ -76,6 +82,6 @@ theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = SubResource("StyleBoxFlat_8be6j")
 theme_override_styles/hover = SubResource("StyleBoxFlat_l65v3")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_u4ktg")
-text = "Play Again"
+text = "REINTENTAR"
 
 [connection signal="pressed" from="RestartButton" to="." method="_on_restart_button_pressed"]

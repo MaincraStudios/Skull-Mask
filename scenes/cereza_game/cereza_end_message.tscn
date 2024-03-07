@@ -1,5 +1,6 @@
-[gd_scene load_steps=10 format=3 uid="uid://o05rolxoya5a"]
+[gd_scene load_steps=11 format=3 uid="uid://o05rolxoya5a"]
 
+[ext_resource type="Script" path="res://scripts/cereza_game/cereza_end_message.gd" id="1_n2kxd"]
 [ext_resource type="Texture2D" uid="uid://b3nnr17txku2n" path="res://assets/cereza_game/backgrounds/cynthia_background.png" id="2_142wo"]
 [ext_resource type="FontFile" uid="uid://r5ttqaxnuvgk" path="res://assets/snake_game/MaldiniBold.ttf" id="2_ruyrn"]
 
@@ -34,6 +35,7 @@ bg_color = Color(0, 0.572549, 0.631373, 1)
 offset = Vector2(250, 100)
 scale = Vector2(0.2, 0.2)
 transform = Transform2D(0.2, 0, 0, 0.2, 250, 100)
+script = ExtResource("1_n2kxd")
 
 [node name="Background" type="Sprite2D" parent="."]
 z_index = -1
@@ -123,3 +125,5 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_vafpg")
 theme_override_styles/hover = SubResource("StyleBoxFlat_5km3t")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_wqagw")
 text = "CONTINUAR"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

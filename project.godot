@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="SkullMask"
-run/main_scene="res://scenes/memory_game/memory_start_message.tscn"
+run/main_scene="res://scenes/memory_game/memory_end_message.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 config/icon="res://icon.svg"
 
