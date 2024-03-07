@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://b7frd1ix8u5mi"]
 
 [ext_resource type="Shader" path="res://shaders/cereza_game/chroma.gdshader" id="1_v3cv7"]
-[ext_resource type="Texture2D" uid="uid://c3p8hqjpfs2wj" path="res://assets/cereza_game/characters/DS DSi - Pokemon Black White - Overworld Entites (1).png" id="3_dwq3p"]
+[ext_resource type="Texture2D" uid="uid://c0sqy8odgqyr7" path="res://assets/cereza_game/characters/ball.png" id="2_j8cf8"]
 
 [sub_resource type="GDScript" id="GDScript_cs5hm"]
 script/source = "extends Area2D
@@ -37,15 +37,15 @@ shader = ExtResource("1_v3cv7")
 shader_parameter/chroma_key = Color(0.533333, 0.564706, 0.815686, 1)
 shader_parameter/intensity = 0.1
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_46wn2"]
-atlas = ExtResource("3_dwq3p")
-region = Rect2(288, 1696, 32, 32)
+[sub_resource type="AtlasTexture" id="AtlasTexture_tjd6h"]
+atlas = ExtResource("2_j8cf8")
+region = Rect2(60, 32, 198, 200)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_86jn3"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_46wn2")
+"texture": SubResource("AtlasTexture_tjd6h")
 }],
 "loop": true,
 "name": &"idle",
@@ -61,7 +61,8 @@ shape = SubResource("CircleShape2D_l5v0g")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 material = SubResource("ShaderMaterial_fex1q")
-position = Vector2(1, -10)
+position = Vector2(5.96046e-08, -9.53674e-07)
+scale = Vector2(0.07, 0.07)
 sprite_frames = SubResource("SpriteFrames_86jn3")
 animation = &"idle"
 

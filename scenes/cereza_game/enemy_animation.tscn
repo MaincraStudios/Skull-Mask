@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://dcjxpww28xq5o"]
+[gd_scene load_steps=10 format=3 uid="uid://dcjxpww28xq5o"]
 
 [ext_resource type="Shader" path="res://shaders/cereza_game/chroma.gdshader" id="1_mplh6"]
 [ext_resource type="Script" path="res://scripts/cereza_game/enemy_animation.gd" id="1_oe3qc"]
 [ext_resource type="Texture2D" uid="uid://c3p8hqjpfs2wj" path="res://assets/cereza_game/characters/DS DSi - Pokemon Black White - Overworld Entites (1).png" id="2_0r0vv"]
+[ext_resource type="Texture2D" uid="uid://c0sqy8odgqyr7" path="res://assets/cereza_game/characters/ball.png" id="4_l0uuo"]
 
 [sub_resource type="Animation" id="Animation_vd46u"]
 length = 0.001
@@ -29,6 +30,30 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Vector2(126, 22)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Ball:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(87, 48)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Ball:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
 }
 
 [sub_resource type="Animation" id="Animation_hvouf"]
@@ -58,6 +83,30 @@ tracks/1/keys = {
 "update": 0,
 "values": [Vector2(126, 53), Vector2(87, 53), Vector2(87, 53), Vector2(165, 53), Vector2(165, 53), Vector2(126, 53), Vector2(126, -18)]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Ball:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(2.3, 3.4, 5, 6.1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(87, 48), Vector2(87, 160), Vector2(166, 47), Vector2(166, 160)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Ball:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 2.3, 3.4, 5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [false, true, false, true]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_5x4uw"]
 _data = {
@@ -76,6 +125,12 @@ size = Vector2(21, 29)
 [node name="Enemy animation" type="Area2D"]
 script = ExtResource("1_oe3qc")
 
+[node name="Ball" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(87, 48)
+scale = Vector2(0.07, 0.07)
+texture = ExtResource("4_l0uuo")
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_5x4uw")
@@ -91,7 +146,7 @@ vframes = 87
 frame = 2560
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(126, 22)
+position = Vector2(87, 22)
 shape = SubResource("RectangleShape2D_puh0r")
 
 [node name="Timer" type="Timer" parent="."]
