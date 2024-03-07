@@ -120,7 +120,7 @@ material = SubResource("ShaderMaterial_u8wf5")
 use_parent_material = true
 position = Vector2(-607.06, -140)
 rotation = 1.5708
-scale = Vector2(6.94595, 4.05056)
+scale = Vector2(6.94595, 7.6515)
 texture = ExtResource("3_w1c4x")
 region_rect = Rect2(100, 100, 0, 0)
 
